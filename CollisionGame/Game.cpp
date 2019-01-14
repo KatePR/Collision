@@ -1,6 +1,7 @@
 #include <iostream>
 #include <conio.h>
 #include <stdlib.h>
+#include <windows.h>
 using namespace std;
 
 int main()
@@ -25,15 +26,15 @@ int main()
 	cout << "You look around to the best of your ability, which isn't much considering that it hurts to move anything.\n";
 	cout << "With a painful grunt, you give up.\n";
 
-	int paths;
+	int paths0;
 	cout << "You ask yourself what you should do.\n" << endl;
 	cout << "1. Use your senses to observe your situation.\n";
 	cout << "2. Try again to get up.\n";
 retry:
 	cout << "Enter your choice: \n";
 
-	cin >> paths;
-	if (paths == 1)
+	cin >> paths0;
+	if (paths0 == 1)
 	{
 		cout << "Dust and debris stung at your eyes as you rolled them to try and see where you were.\n";
 		cout << "You dig your fingers lightly into the floor, feeling cold metal and scratching the surface with your finger nails.\n";
@@ -43,17 +44,22 @@ retry:
 		cout << "What were you doing in a lab?";
 		cout << "No, no, no, that's not right. You're here for a reason.\n";
 		cout << "Right now, you do not care to try and remember. You'll come back to that thought later.\n";
+		cout << "Press ENTER to continue." << endl;
 
 		_getch(); //keeps console up and running after choice is selected and ran.
 	}
-	else if (paths == 2)
+	else if (paths0 == 2)
 	{
 		cout << "Your bones ache and you feel as though your entire body is about to break.\n";
 		cout << "You feel as fragile as glass.\n";
 		cout << "You know you have to get up, but your body tells you otherwise.\n";
 		cout << "You take a deep breath, the air piercing your throat like one thousand tiny needles.\n";
 		cout << "You thrust your body upwards with great force, your back cracking loudly.\n";
-		cout << "You regret your decision as your back aches.";
+		cout << "You regret your decision as your back aches.\n";
+
+		//HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE); //color change
+		//SetConsoleTextAttribute(color, 10);
+		cout << "Press ENTER to continue." << endl;
 		_getch();
 	}
 	else
@@ -62,9 +68,8 @@ retry:
 		goto retry;
 	}
 
-	cout << "Press ENTER to continue.";
 	cout << endl; //add space
-				  //cases depending on choice chosen.
+	//cases depending on choice chosen.
 	switch (paths0)
 	{
 	case 1: cout << "Something 1.\n";
