@@ -71,7 +71,7 @@ retry:
 		goto retry;
 	}
 
-	cout << endl; //add space
+	cout << endl;
 	//cases depending on choice chosen.
 
 	switch (paths0)
