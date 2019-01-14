@@ -59,7 +59,10 @@ retry:
 
 		//HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE); //color change
 		//SetConsoleTextAttribute(color, 10);
+		//system("COLOR 0A");
 		cout << "Press ENTER to continue." << endl;
+		//CloseHandle(color);
+		
 		_getch();
 	}
 	else
@@ -70,12 +73,13 @@ retry:
 
 	cout << endl; //add space
 	//cases depending on choice chosen.
+
 	switch (paths0)
 	{
-	case 1: cout << "Something 1.\n";
+	case 1: cout << "You slowly, but surely, get yourself to set up.\n";
 		_getch();
 		break;
-	case 2: cout << "Something 2.\n";
+	case 2: cout << "You force yourself to set up.\n";
 		_getch();
 		break;
 	}
